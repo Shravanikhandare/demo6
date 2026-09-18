@@ -18,6 +18,8 @@ def home():
 if __name__ == "__main__":
   app.run(host="0.0.0.0", port=5000)
 
+docker run -it --name container1 -p 8000:8000 codeing
+
 
 
 # Use the official lightweight Alpine-based Nginx image
@@ -31,3 +33,5 @@ EXPOSE 80
 
 # Start Nginx in the foreground
 CMD ["nginx", "-g", "daemon off;"]
+
+docker run -d -p 8090:80 --name case  code
