@@ -1,0 +1,33 @@
+R lab:1
+
+#Q1
+setwd("/home/pgcp-esd/Rcode/Datasets")
+Orders <- read.csv("Orders.csv")
+Orders
+shravi <- subset(Orders, Payment.Terms == "Online")
+shravi
+
+#Q2
+
+data(mtcars)
+write.csv(mtcars,"mtcars.csv")
+reads <- read.csv("mtcars.csv")
+reads
+
+#Q3
+Diamonds <- read.csv2("Diamonds.csv",stringsAsFactors=T)
+str(Diamonds)
+subsets <- subset(Diamonds,cut=="Premium" & color =="J")
+subsets
+
+#Q4
+items_df <- data.frame(carat= Diamonds$carat,
+                       color=Diamonds$color,
+                       depth=Diamonds$depth,
+                       price=Diamonds$price)
+items_df
+
+#Q5
+setwd("/home/pgcp-esd/Rcode/Datasets")
+readrow <- read.csv("mtcars.csv", stringsAsFactors = T)
+readrow[c(2,18,30,12),]
